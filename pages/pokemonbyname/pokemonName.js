@@ -37,6 +37,8 @@ export const getStaticProps = async(context) => {
     
     let pokemon_name = '';
     
+    let pokemonname1 =   url.query.title; //context.params.pokemonId.toLowerCase()
+    console.log(`name1->:${pokemonname1}` );
     let pokemonname = context.params.pokemonId.toLowerCase()
     console.log(`name->:${pokemonname}` );
 
