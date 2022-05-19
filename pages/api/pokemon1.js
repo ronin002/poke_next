@@ -952,9 +952,14 @@ export default function Pokemon(req,res){
 
     });
 
-    
+  
+
+   
+   
+
+    //const id = context.params.pokemonId
     console.log(`id:${id_pokemon}` );
-    //console.log(`name:${pokemonname}` );
+    console.log(`name:${pokemonname}` );
 
     /*
     if (id_pokemon != 0){
@@ -986,14 +991,14 @@ export default function Pokemon(req,res){
     //return  res.json({status: id_pokemon})
     //return {id_pokemon};
 
-    //res.status(200).json({ name: 'John Doe' })
-
-    return(
+    res.status(200).json({ name: 'John Doe' })
+    
+    //return(
     //     json({ idPokemon: id_pokemon })
     //     // <div className={styles.pokemon_container}>
-        <h1>{resultado}</h1>
+    //    <h1>{resultado}</h1>
     //     // </div>
-    )
+    //)
 
     
 }
