@@ -4,7 +4,7 @@ import styles from '../../styles/Pokemon.module.css'
 
 import {useRouter} from 'next/router'
 
-
+import { NextApiRequest, NextApiResponse } from 'next'
 
 
 export default function Pokemon(){
@@ -982,15 +982,20 @@ export default function Pokemon(){
      //        props: {pokemon:`[{"id":${id_pokemon}}]`},
      //    }
 
-
+    var resultado =  `[{"id":${id_pokemon}}]`;
 
     if (router.isFallback){
         return <div>Carregando...</div>
     }
 
+    //return  res.json({status: id_pokemon})
+    //return {id_pokemon};
+
     return(
-        <div className={styles.pokemon_container}>
-            <h1>{id_pokemon}</h1>
-        </div>
+    //     json({ idPokemon: id_pokemon })
+    //     // <div className={styles.pokemon_container}>
+        <h1>{resultado}</h1>
+    //     // </div>
     )
+    
 }
