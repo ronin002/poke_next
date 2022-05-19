@@ -953,7 +953,7 @@ export const getStaticProps = async(context) => {
         pokemon_name = arrPokemons[i].name;
         pokemon_id = arrPokemons[i].url;
         
-        console.log(`Nome e ID: ${pokemon_name} - ${pokemon_id }`);
+        //console.log(`Nome e ID: ${pokemon_name} - ${pokemon_id }`);
 
         if (name == pokemon_name){
             id_pokemon = pokemon_id;
