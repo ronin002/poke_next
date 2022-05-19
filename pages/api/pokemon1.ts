@@ -997,7 +997,7 @@ const handler = (req:NextApiRequest, res:NextApiResponse) =>{
     //return  res.json({status: id_pokemon})
     //return {id_pokemon};
 
-    res.status(200).json({ id_pokemon: id_pokemon})
+    res.status(200).json({'id_pokemon':id_pokemon})
     
     //return(
     //     json({ idPokemon: id_pokemon })
