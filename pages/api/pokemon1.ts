@@ -2,25 +2,31 @@ import Image from 'next/image'
 
 import styles from '../../styles/Pokemon.module.css'
 
+
+
+import { NextApiRequest, NextApiResponse } from 'next';
+
 import {useRouter} from 'next/router'
 
-import { NextApiRequest, NextApiResponse } from 'next'
+
+const handler = (req:NextApiRequest, res:NextApiResponse) =>{
+
+    
 
 
-export default function Pokemon(req,res){
+    
+    //const router = useRouter();
+    //console.log(router.query);
 
+    //const {name} =  router.query;
 
-
-
-    const router = useRouter()
-    console.log(router.query);
-
-    const {name} =  router.query;
+    console.log(req.query);
+    const {name} =  req.query;
 
     console.log(name);
 
-    let pokemon_id = 0
-    let id_pokemon = 0
+    let pokemon_id = '';
+    let id_pokemon = '';
     
     let pokemon_name = '';
     
@@ -984,14 +990,14 @@ export default function Pokemon(req,res){
 
     var resultado =  `[{"id":${id_pokemon}}]`;
 
-    if (router.isFallback){
-        return <div>Carregando...</div>
-    }
+    //if (router.isFallback){
+    //    return res.status(200).json({ name: 'Carregando' }) //<div>Carregando...</div>
+    //}
 
     //return  res.json({status: id_pokemon})
     //return {id_pokemon};
 
-    res.status(200).json({ name: 'John Doe' })
+    res.status(200).json({ id_pokemon: id_pokemon})
     
     //return(
     //     json({ idPokemon: id_pokemon })
@@ -1001,4 +1007,7 @@ export default function Pokemon(req,res){
     //)
 
     
+
 }
+
+export default handler;
